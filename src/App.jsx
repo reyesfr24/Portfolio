@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import perfilImg from '../img/perfil.jpg';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,7 +44,7 @@ function App() {
       <div className="container ">
       <header className="header">
         <img
-          src="../img/perfil.jpg"
+          src={perfilImg}
           // alt="Tu Nombre"
           className="avatar"
         />
