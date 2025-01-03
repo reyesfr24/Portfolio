@@ -45,7 +45,7 @@ function App() {
       <div className="container ">
       <header className="header">
         <img
-          src="/img/perfil.jpg"
+          src="../img/perfil.jpg"
           // alt="Tu Nombre"
           className="avatar"
         />
