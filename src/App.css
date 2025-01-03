@@ -1,0 +1,418 @@
+:root {
+  --color-primary: #3a5a78;
+  --color-primary-light: #5c7d99;
+  --color-secondary: #e6d7c3;
+  --color-background: #f8f5f0;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-white: #ffffff;
+  --color-beige-light: #f3ece2;
+  --color-beige: #e6d7c3;
+  --color-blue-dark: #2c4558;
+}
+
+@keyframes hero-gradient-animation {
+  0% {
+      --y-0: 22%;
+      --s-start-0: 0%;
+      --s-end-0: 50%;
+      --x-0: 83%;
+      --c-0: hsla(53, 82%, 87%, 1);
+      --x-1: 0%;
+      --y-1: 50%;
+      --s-start-1: 0%;
+      --s-end-1: 50%;
+      --c-1: hsla(212, 37%, 91%, 1);
+      --y-2: 21%;
+      --c-2: hsla(45, 0%, 86%, 1);
+      --x-2: 21%;
+      --s-start-2: 0%;
+      --s-end-2: 50%;
+      --x-3: 54%;
+      --y-3: 77%;
+      --c-3: hsla(211, 100%, 95%, 1);
+      --s-start-3: 0%;
+      --s-end-3: 50%;
+      --y-4: 75%;
+      --x-4: 30%;
+      --s-start-4: 0%;
+      --s-end-4: 50%;
+      --c-4: hsla(215, 25%, 35%, 1);
+  }
+
+  100% {
+      --y-0: 75%;
+      --s-start-0: 8;
+      --s-end-0: 86;
+      --x-0: 90%;
+      --c-0: hsla(53, 82%, 87%, 1);
+      --x-1: 28%;
+      --y-1: 13%;
+      --s-start-1: 8;
+      --s-end-1: 86;
+      --c-1: hsla(212, 37%, 91%, 1);
+      --y-2: 30%;
+      --c-2: hsla(45, 0%, 86%, 1);
+      --x-2: 94%;
+      --s-start-2: 8;
+      --s-end-2: 86;
+      --x-3: 87%;
+      --y-3: 91%;
+      --c-3: hsla(211, 100%, 95%, 1);
+      --s-start-3: 8;
+      --s-end-3: 86;
+      --y-4: 10%;
+      --x-4: 64%;
+      --s-start-4: 8;
+      --s-end-4: 86;
+      --c-4: hsla(215, 25%, 35%, 1);
+  }
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22%
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 83%
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(53, 82%, 87%, 1)
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(212, 37%, 91%, 1)
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 21%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(45, 0%, 86%, 1)
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 21%
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 54%
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 77%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(211, 100%, 95%, 1)
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 75%
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 30%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(215, 25%, 35%, 1)
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  height: 100%; /* Ocupa toda la altura de la ventana */
+  /* width: 100%;  */
+  color: var(--color-text);
+  background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  --y-0: 22%;
+  --x-0: 83%;
+  --c-0: hsla(53, 82%, 87%, 1);
+  --x-1: 0%;
+  --y-1: 50%;
+  --c-1: hsla(212, 37%, 91%, 1);
+  --y-2: 21%;
+  --c-2: hsla(45, 0%, 86%, 1);
+  --x-2: 21%;
+  --x-3: 54%;
+  --y-3: 77%;
+  --c-3: hsla(211, 100%, 95%, 1);
+  --y-4: 75%;
+  --x-4: 30%;
+  --c-4: hsla(215, 25%, 35%, 1);
+  ;
+  background-color: hsla(231, 0%, 93%, 1);
+  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
+  animation: hero-gradient-animation 5s linear infinite alternate;
+  background-blend-mode: normal, normal, normal, normal, normal;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.section {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-beige);
+}
+
+.experience-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience-item {
+  background-color: var(--color-beige-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.company-period {
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.tech-item {
+  background-color: var(--color-beige-light);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.tech-item:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: var(--color-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
